@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="C:\Users\ali\Desktop\Jquery Mobile\themes\CustomDarkBlue.css" />
+		<link rel="stylesheet" href="C:\Users\ali\Desktop\Jquery Mobile\themes\jquery.mobile.icons.min.css"/>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css"/>
+		<script src="C:\Users\ali\Documents\jquery-2.0.0.min.js"></script>
+		<script src="C:\Users\ali\Desktop\Jquery Mobile\jquery.mobile.custom.js"></script>
+		<script src="localhost\Volunteer\js\VolunteerEfforts.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--the meta tag is to ensure that the view size remains 1px to 1 display pixel-->
+	<!--class="ui-btn-active"-->
+	</head>
+		<title>Volunteer Effort</title>
+			<div data-rol="header" class="ui-grid-a">
+					<div class="ui-block-a"><div class="ui-bar ui-bar-a"><h1> Volunteer Efforts</h1></div></div>
+						<div class="ui-block-b"><div class="ui-bar ui-bar-a">
+							<a href="#popNested" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-transition="pop">
+							<div data-role="popup"  id="popupNested" data-theme="none">
+								<div data-role="collapsibleset" data-theme="a" data-content-theme="a" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" style="margin:0;width:250px;">
+									<div data-role="collapsible" data-inset="false">
+										<h2>Institution</h2>
+											<ul data-role="listview">
+												<li><a href="#InstituteSignIn" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" data-transition="pop" style="margin:0;width:250px;">Institution Sign-In</a></li>
+												<li><a href="#popupInstituteMenu" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" data-transition="pop" style="margin:0;width:250px;">Institution Registration</a></li>
+											</ul>	
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+			</div>
+				<body>
+			<!-- Nested Menu -->
+			
+				<a href="#popNested" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-transition="pop" id="popupNested" data-theme="none">
+					<div data-role="collapsibleset" data-theme="a" data-content-theme="a" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" style="margin:0;width:500px;">
+						<div data-role="collapsible" data-inset="false">
+						<h2>Institution</h2>
+							<ul data-role="listview">
+								<li><a href="#InstituteSignIn" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" data-transition="pop" style="margin:0;width:500px;">Institution Sign-In</a></li>
+								<li><a href="#popupInstituteMenu" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" data-transition="pop" style="margin:0;width:500px;">Institution Registration</a></li>
+							</ul>	
+						</div>
+					</div>
+			
+				
+			<!-- Navigation Bar
+					<div data-role="navbar" data-grid="c">
+						<ul>
+							<li><a href="#popupInstituteMenu" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" data-transition="pop">Institution</a></li>
+							<li><a href="#popupMemberMenu"  data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" data-transition="pop">Member</a></li>
+							<li><a href="#" class="ui-btn-active">Upcoming Events</a></li>
+							<li><a href="#" class="ui-btn-active">Contact</a></li>
+						</ul>
+											
+					</div>  -->	
+					
+			<!-- Creating menu popup for Institute Nav Bar Button -->
+					<div data-role="popup" id="popupInstituteMenu" data-theme="b">
+						<ul data-role="listview" data-inset="true" style="min-width:210px;">
+							<li><a href="#LoginInstitute">Sign in</a></li>
+							<li><a href="#formRegisterInstitute" data-rel="popup" onclick="openInstituteForm()">Register New Institute</a></li>
+						</ul>
+					</div>
+					
+			<!-- Creating menu popup for Member Nav Bar Button -->
+					<div data-role="popup" id="popupMemberMenu" data-theme="b">
+						<ul data-role="listview" data-inset="true" style="min-width:210px;">
+							<li><a href="#LoginMember">Sign in</a></li>
+							<li><a href="#popupRegisterMember" data-rel="popup">Register New Member</a></li>
+						</ul>
+					</div>
+
+			<!-- Registration Form for New Institution -->
+			
+					<div data-role="popup" id="formRegisterInstitute" data-theme="a" class="ui-corner-all">
+						<form>
+							<div style="padding:10px 20px;">
+								<h3>Sign up as a new Institution</h3>
+								<label for="institution" class="ui-hidden-accessible">Username:</label>
+								<input type="text" name="user" id="institution" value="" placeholder="Institution Name" data-theme="a">
+								<label for="Address" class="ui-hidden-accessible">Institution Address:</label>
+								<input type="text" name="address" id="address" value="" placeholder="Address" data-theme="a">
+								<label for="username" class="ui-hidden-accessible">Username:</label>
+								<input type="text" name="user" id="username" value="" placeholder="Username" data-theme="a">
+								<label for="password" class="ui-hidden-accessible">Password:</label>
+								<input type="password" name="pass" id="password" value="" placeholder="Password" data-theme="a">
+								<label for="email" class="ui-hidden-accessible">Email:</label>
+								<input type="text" name="email" id="email" value="" placeholder="Email" data-theme="a">
+								<label for="institutionSelect">Institution Selection:</label>
+								<select name="institutionSelect" id="institutionSelect" data-mini="true">
+									<option value="1">Religious Organization</option>
+									<option value="2">Food Bank</option>
+									<option value="3">Homeless Shelter</option>
+									<option value="4">Public School</option>
+								</select>
+								<button type="submit" id="submitInstitute" onclick = "createInstitute()" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check">Sign Up</button>
+							</div>
+						</form>
+					</div>
+		
+			
+			<!-- Registration Form for New Member -->
+					<div data-role="popup" id="formRegisterMember" data-theme="a" class="ui-corner-all">
+						<form>
+							<div style="padding:10px 20px;">
+								<h3>Sign up as a new Member</h3>
+								<label for="member">Full Name:</label>
+								<input type="text" name="member" id="memberName"  placeholder="Member's Full Name" data-theme="a">
+								<label for="username" class="ui-hidden-accessible">Username:</label>
+								<input type="text" name="user" id="MemberUN" placeholder="Username" data-theme="a">
+								<label for="password" class="ui-hidden-accessible">Password:</label>
+								<input type="password" name="pass" id="MemberPass"  placeholder="Password" data-theme="a">
+								<button type="button" onclick="createMember()" id="submitMember" >Sign Up</button>
+							</div>
+						</form>
+					</div>	
+				</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

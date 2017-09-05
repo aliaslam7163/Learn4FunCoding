@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--<link rel="stylesheet" href="Volunteer\css\CustomDarkBlue.css" />-->
+		<!--<link rel="stylesheet" href="Volunteer\css\jquery.mobile.icons.min.css"/>-->
+		<link rel="stylesheet" href="Volunteer\css\bootstrap.css" />
+		<link rel="stylesheet" href="Volunteer\css\bootstrap.min.css"/>
+		<link rel="stylesheet" href="Volunteer\css\bootstrap-theme.css" />
+		<link rel="stylesheet" href="Volunteer\css\customCSS.css" />
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css"/>
+		<script type="text/javascript" src="Volunteer\js\jquery-2.0.0.min.js"></script>
+		<script type="text/javascript" src="Volunteer\js\bootstrap.js"/>
+		<script type="text/javascript" src="Volunteer\js\bootstrap.min.js"></script>
+		<script type="text/javascript" src="Volunteer\js\jquery.mobile.custom.js"></script>
+		<script type="text/javascript" src="Volunteer\js\VolunteerEfforts.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--the meta tag is to ensure that the view size remains 1px to 1 display pixel-->
+	<!--class="ui-btn-active"-->
+	</head>
+	<title> Institution Registion Form </title>
+	<body>
+	
+		<div class="container">
+			<form class="form-horizontal" role="form">
+				<h2> Registration Form</h2>
+				<div class="form-group row">
+					<label for="fName" class="col-sm-3 control-label">Member Name</label>
+					<div class="col-sm-4">
+						<input type="text" id="fName" placeholder="Full Name" class="form-control" autofocus>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="memberUN" class="col-sm-3 control-label col-form-label">Member Username</label>
+					<div class="col-sm-4">
+						<input type="text" id="memberUN" placeholder="Username" class="form-control" autofocus>
+					</div>
+				</div>	
+				<div class="form-group row">
+					<label for="password" class="col-sm-3 control-label">Password</label>
+					<div class="col-sm-4">
+						<input type="password" id="memberPass" placeholder="Password" class="form-control">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="email" class="col-sm-3 control-label">Email Address</label>
+					<div class="col-sm-4">
+						<input type="email" id="email" placeholder="Email" class="form-control">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-4 col-sm-offset-3">
+						<button type="submit" onclick="registerMember()" class="btn btn-primary btn-block">Register</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		
+	</body>
+	
+</html>
