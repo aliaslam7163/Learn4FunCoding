@@ -4,6 +4,7 @@ $(document).ready(function(){
 	//console.log(test);
 	//bubbleSort(test);
 	//insertionSort(test);
+	DecimaltoBinary(115);
 	
 });
 
@@ -55,4 +56,54 @@ function insertionSort(arr)
 		arr[j+1] = temp;	
 		console.log("swaped = " + arr);
 	}
+}
+
+function DecimaltoBinary(n)
+{
+	
+	var convert = n.toString(2);
+	//var conBack = parseInt(convert,10);
+	var j=0;
+	var arr=[];
+	var original = [];
+	var dec = 0;
+	while(j<=convert.length-1)
+	{
+		original[j]=convert[j];
+		if(convert[j] == "1")
+			arr[j] = "0";
+		else
+			arr[j] = "1";
+		
+		
+		j++;
+	}
+	dec = backtoDecimal(arr);
+	console.log(original);
+	console.log(arr);
+	console.log(dec);	
+}
+
+function backtoDecimal(arr)
+{
+	len = arr.length-1;
+	j=len;
+	var sum = 0;
+	var power = 0;
+	while(j>=0)
+	{
+		
+		num = arr[j];
+		
+		if(num == "0")
+			sum += 0;
+		
+		else if(num == "1")
+		{
+			sum += Math.pow(2,power);
+		}
+		j=j-1;
+		power++;
+	}
+	return sum;
 }
